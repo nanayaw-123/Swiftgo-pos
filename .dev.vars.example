@@ -1,0 +1,14 @@
+# Cloudflare Development Variables (for local testing with wrangler dev)
+# Copy this file to .dev.vars and fill in your values
+# WARNING: Never commit .dev.vars to version control
+
+# Cloudflare R2 Storage
+R2_ACCESS_KEY_ID=your-r2-access-key-id
+R2_SECRET_ACCESS_KEY=your-r2-secret-access-key
+CLOUDFLARE_ACCOUNT_ID=your-account-id
+
+# Turnstile Bot Protection
+TURNSTILE_SECRET_KEY=your-turnstile-secret-key
+
+# Stripe (if using Cloudflare Workers for webhooks)
+STRIPE_SECRET_KEY=your-stripe-secret-key

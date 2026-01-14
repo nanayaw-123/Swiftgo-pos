@@ -1,0 +1,10 @@
+{
+  "projectId": "a6a08164-e3e6-4c99-9a9e-bb757d59565f",
+  "createdAt": 1765303464063,
+  "version": "1.0",
+  "startupCommands": [
+    "bun install; bun run dev"
+  ],
+  "vercelProjectId": "prj_4sno49mM0fh85aVuTTE5ZsKAU1Ft",
+  "deployedWithUserToken": false
+}
