@@ -57,17 +57,18 @@ export function SetupBanner() {
           </div>
           
           <div className="flex items-center gap-2">
-            <Link href="/setup">
               <Button 
                 size="sm" 
                 variant="secondary"
-                className="bg-white text-orange-600 hover:bg-gray-100"
+                className="bg-white text-orange-600 hover:bg-gray-100" asChild
               >
+                  <Link href="/setup">
                 <span className="hidden sm:inline">Go to Setup</span>
                 <span className="sm:hidden">Setup</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
               </Button>
-            </Link>
+            
             
             <button
               onClick={handleDismiss}

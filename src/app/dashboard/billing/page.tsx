@@ -11,13 +11,14 @@ import {
   ArrowUpRight, 
   History, 
   Zap, 
+  
   Check, 
   ShieldCheck,
   AlertCircle,
   HelpCircle
 } from 'lucide-react'
 import { useUserRole } from '@/hooks/useUserRole'
-import { createClient } from '@/lib/supabase-auth'
+import { createClient } from '@/lib/supabase/client'
 import { toast } from 'sonner'
 import { format } from 'date-fns'
 

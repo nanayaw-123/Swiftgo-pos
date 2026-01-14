@@ -18,7 +18,7 @@ import {
   Zap
 } from 'lucide-react'
 import { useUserRole } from '@/hooks/useUserRole'
-import { createClient } from '@/lib/supabase-auth'
+import { createClient } from '@/lib/supabase/client'
 import { 
   BarChart, 
   Bar, 

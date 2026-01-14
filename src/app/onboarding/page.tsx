@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { ShoppingCart, Store, Phone, DollarSign, Building2, Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
-import { createClient } from '@/lib/supabase-auth'
+import { createClient } from '@/lib/supabase/client'
 
 export default function OnboardingPage() {
   const router = useRouter()

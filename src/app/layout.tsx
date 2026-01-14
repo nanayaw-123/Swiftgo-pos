@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [{ name: "SwiftPOS" }],
   creator: "SwiftPOS",
   publisher: "SwiftPOS",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ? (process.env.NEXT_PUBLIC_APP_URL.startsWith('http') ? process.env.NEXT_PUBLIC_APP_URL : `https://${process.env.NEXT_PUBLIC_APP_URL}`) : 'https://remix-of-remix-of-swiftpos.vercel.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ? (process.env.NEXT_PUBLIC_APP_URL.startsWith('http') ? process.env.NEXT_PUBLIC_APP_URL : `https://${process.env.NEXT_PUBLIC_APP_URL}`) : 'http://localhost:3000'),
   openGraph: {
     title: "SwiftPOS - Modern Point of Sale System",
     description: "Complete POS solution for modern businesses",

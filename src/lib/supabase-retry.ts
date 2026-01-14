@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase-auth'
+import { createClient } from '@/lib/supabase/client'
 
 export interface RetryOptions {
   maxAttempts?: number

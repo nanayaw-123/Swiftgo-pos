@@ -13,7 +13,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { Search, Plus, Minus, Trash2, CreditCard, DollarSign, Smartphone, Wifi, WifiOff, Receipt, ShoppingCart, Camera, Percent, Save, Clock, User } from 'lucide-react'
 import { toast } from 'sonner'
 import { Html5Qrcode } from 'html5-qrcode'
-import { createClient } from '@/lib/supabase-auth'
+import { createClient } from '@/lib/supabase/client'
 import { SyncManager } from '@/lib/offline/sync-manager'
 
 const supabase = createClient()

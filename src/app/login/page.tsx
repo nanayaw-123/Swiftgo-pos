@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { createClient } from "@/lib/supabase-auth"
+import { createClient } from '@/lib/supabase/client'
 import { waitForOrCreateProfile } from "@/lib/supabase-retry"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"

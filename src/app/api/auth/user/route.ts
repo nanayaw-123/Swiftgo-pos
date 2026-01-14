@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createSupabaseServerClient } from '@/lib/supabase-auth'
+import { createSupabaseBrowserClient } from '@/lib/supabase-browser'
 import { getServerUser } from '@/lib/supabase/server'
 
 export async function GET(request: NextRequest) {
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Get user profile with tenant info
-    const supabase = await createSupabaseServerClient()
+    const supabase = await createSupabaseBrowserClient()
     const { data: profile, error: profileError } = await supabase
       .from('profiles')
       .select('*, tenants(*)')
@@ -56,7 +56,7 @@ export async function PATCH(request: NextRequest) {
     const body = await request.json()
     const { firstName, lastName, email } = body
 
-    const supabase = await createSupabaseServerClient()
+    const supabase = await createSupabaseBrowserClient()
 
     // Update user metadata
     const updates: any = {}
