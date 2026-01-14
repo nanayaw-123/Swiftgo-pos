@@ -213,16 +213,16 @@ export default function Navigation() {
               </>
             ) : !loading ? (
               <>
+              <Button variant="outline" className="w-full"asChild onClick={() => setMobileMenuOpen(false)}>
               <Link href="/login">
-                <Button variant="outline" className="w-full">
                  <span>Sign In</span>
-                </Button>
               </Link>
+              </Button>
+               <Button className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
               <Link href="/register">
-                <Button className="w-full">
                   <span>Get Started</span>
-                </Button>
               </Link>
+              </Button>
               </>
             ) : null}
           </div>

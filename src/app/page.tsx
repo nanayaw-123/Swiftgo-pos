@@ -664,12 +664,12 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link href="/register">
             <Button size="lg" className="h-20 px-12 text-2xl font-black bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl shadow-[0_25px_60px_rgba(16,185,129,0.3)] transition-all hover:scale-105 active:scale-95 group" asChild>
+              <Link href="/register">
                 Start Free Today
                 <ArrowRight className="ml-4 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              </Link>
             </Button>
-            </Link>
             <Button size="lg" variant="outline" className="h-20 px-12 text-2xl font-black border-white/20 hover:bg-white hover:text-black rounded-2xl transition-all hover:scale-105 active:scale-95" asChild>
               <Link href="https://wa.me/233506329180" target="_blank">
                 <MessageSquare className="mr-4 w-6 h-6" />
