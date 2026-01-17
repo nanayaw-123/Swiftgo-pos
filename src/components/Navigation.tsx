@@ -84,14 +84,13 @@ export default function Navigation() {
               Pricing
             </Link>
             <ThemeToggle />
-              {!loading && user ? (
-                <>
-                  <NotificationCenter />
-                  <Button variant="outline" asChild>
-                    <Link href="/dashboard">
-                    <span>Dashboard</span></Link>
-                  </Button>
-                  <DropdownMenu>
+            {!loading && user ? (
+              <>
+                <NotificationCenter />
+                <Button variant="outline" asChild>
+                  <Link href="/dashboard">Dashboard</Link>
+                </Button>
+                <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="relative h-10 w-10 rounded-full">
                       <Avatar className="h-10 w-10">
@@ -131,20 +130,16 @@ export default function Navigation() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </>
-              ) : !loading ? (
-                <>
-                  <Button variant="outline" asChild>
-                    <Link href="/login">
-                    <span>Sign In</span>
-                    </Link>
-                  </Button>
-                  <Button asChild>
-                    <Link href="/register">
-                    <span>Get Started</span>
-                    </Link>
-                  </Button>
-                </>
-              ) : null}
+            ) : !loading ? (
+              <>
+                <Button variant="outline" asChild>
+                  <Link href="/login">Sign In</Link>
+                </Button>
+                <Button asChild>
+                  <Link href="/register">Get Started</Link>
+                </Button>
+              </>
+            ) : null}
           </div>
 
           {/* Mobile menu button */}
@@ -153,6 +148,7 @@ export default function Navigation() {
             {!loading && user && <NotificationCenter />}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -200,29 +196,46 @@ export default function Navigation() {
                     </div>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
-                  <Link href="/dashboard">Dashboard</Link>
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  asChild
+                >
+                  <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>
+                    Dashboard
+                  </Link>
                 </Button>
-                <Button variant="outline" className="w-full" onClick={() => {
-                  setMobileMenuOpen(false)
-                  handleSignOut()
-                }}>
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  onClick={() => {
+                    setMobileMenuOpen(false)
+                    handleSignOut()
+                  }}
+                >
                   <LogOut className="mr-2 h-4 w-4" />
                   Log out
                 </Button>
               </>
             ) : !loading ? (
               <>
-              <Button variant="outline" className="w-full"asChild onClick={() => setMobileMenuOpen(false)}>
-              <Link href="/login">
-                 <span>Sign In</span>
-              </Link>
-              </Button>
-               <Button className="w-full" asChild onClick={() => setMobileMenuOpen(false)}>
-              <Link href="/register">
-                  <span>Get Started</span>
-              </Link>
-              </Button>
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  asChild
+                >
+                  <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
+                    Sign In
+                  </Link>
+                </Button>
+                <Button 
+                  className="w-full" 
+                  asChild
+                >
+                  <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
+                    Get Started
+                  </Link>
+                </Button>
               </>
             ) : null}
           </div>

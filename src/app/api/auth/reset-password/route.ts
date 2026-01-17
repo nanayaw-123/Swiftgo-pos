@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
 
     // Send password reset email
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${process.env.NEXT_PUBLIC_APP_URL || 'https://remix-of-remix-of-swiftpos.vercel.app'}/reset-password`,
+        redirectTo: `${process.env.NEXT_PUBLIC_APP_URL || 'https://localhost:3000'}/reset-password`,
       })
 
     if (error) {
