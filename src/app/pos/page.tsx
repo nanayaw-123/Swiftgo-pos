@@ -18,17 +18,6 @@ import { SyncManager } from '@/lib/offline/sync-manager'
 
 const supabase = createClient()
 
-interface Product {
-  id: string
-  name: string
-  sku: string
-  barcode: string | null
-  price: number
-  stock: number
-  image_url: string | null
-  category: string | null
-}
-
 interface CartItem {
   product_id: string
   name: string
